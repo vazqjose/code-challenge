@@ -1,0 +1,36 @@
+<div class="homapage-content">
+    <div class="all-users">
+        <h3>Users pulled from API</h3>
+        <li *ngFor="let user of users">
+            <span> ID: {{ user.id }} </span>
+            <span>
+                <button class="button" (click)="onAdd(user)"> Add </button>
+                <button class="button"> View </button>
+            </span>
+
+            <ul>
+                <li> Name: {{ user.name }} </li>
+                <li> Username: {{ user.username }} </li>
+                <li> Email: {{ user.email }} </li>
+                <li> Phone: {{ user.phone }} </li>
+            </ul>
+            <hr />
+    </li>
+    </div>
+
+    <div class="local-users">
+        <h3>Users saved in local storage</h3>
+        <li *ngFor="let user of my_users">
+            <span> ID: {{ user.id }} </span>
+            <span>
+                <button class="button"> Update </button>
+                <button class="button"> Delete </button>
+            </span>
+            <ul>
+                <p> Name: {{ user.name }} </p>
+                <p> Username: {{ user.username }} </p>
+                <p> Email: {{ user.email }} </p>
+            </ul>
+    </li>
+    </div>
+</div>
