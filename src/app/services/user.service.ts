@@ -36,4 +36,15 @@ export class UserService {
   deleteUser(id: any){
     return this.http.delete(this.baseUrl + 'users/' + id)
   }
+
+    /*
+    get id parameter and call get method
+  */
+    viewUser(id: any){
+      return this.http.get(this.baseUrl + 'users/' + id)
+    }
+
+    updateUser(id: any, userObj: any){
+      return this.http.put(this.baseUrl + 'users/' + id, userObj);
+    }
 }
