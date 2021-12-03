@@ -1,7 +1,6 @@
 
-    <mat-card>
-      <mat-card-title>Edit user info</mat-card-title>
-      <mat-card-content>
+      <h2>Edit user info</h2>
+
     <div *ngIf="dataLoaded">
         <form [formGroup]="editUserForm" (submit)="updateUser()">
           <p>
@@ -27,6 +26,4 @@
           <p><button mat-raised-button color="primary">Update user info</button></p>
         </form>
     </div>
-      </mat-card-content>
-    </mat-card>
 
