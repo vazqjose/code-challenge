@@ -14,6 +14,7 @@ export class EditUserComponent implements OnInit {
   userId: any;
   userDetails: any;
   editUserForm: FormGroup = new FormGroup({});
+  // Flag that will be verified before data rendering in template
   dataLoaded: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute,
