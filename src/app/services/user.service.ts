@@ -22,4 +22,18 @@ export class UserService {
   listUsers(){
     return this.http.get(this.baseUrl + 'users');
   }
+
+  /*
+    Receive a user data object and call POST method
+  */
+  addUser(userObj: any){
+    return this.http.post(this.baseUrl + 'users', userObj)
+  }
+
+  /*
+    get id parameter and call delete method
+  */
+  deleteUser(id: any){
+    return this.http.delete(this.baseUrl + 'users/' + id)
+  }
 }
