@@ -3,7 +3,7 @@
   <h3>Displaying {{ listUsers.length }} users</h3>
   <mat-list role="list">
     <mat-list-item role="listitem" *ngFor="let user of listUsers">
-      <span class="username">{{ user.name }}</span><a class="button" [routerLink]="['edit', user.id]">Edit</a> | <a class="button" [routerLink]="['delete', user.id]">Delete</a>
+      <span class="username">{{ user.name }}</span><a class="button" [routerLink]="['/users/edit', user.id]">Edit</a> | <a class="button" [routerLink]="['/users/delete', user.id]">Delete</a>
     </mat-list-item>
   </mat-list>
 </div>
