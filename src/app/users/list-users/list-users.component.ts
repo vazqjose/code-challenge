@@ -25,7 +25,7 @@ export class ListUsersComponent implements OnInit {
       data => {
         this.listUsers = data;
 
-        // save to local storage
+        // save to local storage and show in console
         localStorage.setItem("list_users", JSON.stringify(this.listUsers));
         this.get_users = localStorage.getItem("list_users");
         console.log(this.get_users);
